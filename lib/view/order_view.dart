@@ -37,15 +37,17 @@ class _OrderViewState extends State<OrderView> {
           ),
         ),
       ),
-      body: Center(
-        child: Column(
-          children: [
-            _buildSelection(),
-            const SizedBox(
-              height: 20,
-            ),
-            selectedIndex == 0 ? _buildDelivery() : _buildPickUp(),
-          ],
+      body: SingleChildScrollView(
+        child: Center(
+          child: Column(
+            children: [
+              _buildSelection(),
+              const SizedBox(
+                height: 20,
+              ),
+              selectedIndex == 0 ? _buildDelivery() : _buildPickUp(),
+            ],
+          ),
         ),
       ),
     );

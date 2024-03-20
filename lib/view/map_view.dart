@@ -78,52 +78,55 @@ class _MapViewState extends State<MapView> {
           ),
           Positioned(
             top: 80,
-            left: 50,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                GestureDetector(
-                  onTap: () {
-                    Navigator.pushReplacementNamed(context, RoutesApp.ORDER);
-                  },
-                  child: Container(
-                    width: 44,
-                    height: 44,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(14),
-                        color: AppPalette.white),
-                    padding:
-                        const EdgeInsets.only(left: 14, right: 10, bottom: 2),
-                    child: SvgPicture.asset(
-                      'assets/icons/arrow-left.svg',
+            child: Padding(
+              padding: const EdgeInsets.only(left: 50),
+              child: Row(
+                children: [
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushReplacementNamed(context, RoutesApp.ORDER);
+                    },
+                    child: Container(
+                      width: 44,
+                      height: 44,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(14),
+                          color: AppPalette.white),
+                      child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: SvgPicture.asset(
+                          'assets/icons/arrow-left.svg', height: 24, width: 24,
+                        ),
+                      ),
                     ),
                   ),
-                ),
-                const SizedBox(
-                  width: 200,
-                ),
-                GestureDetector(
-                  onTap: () {},
-                  child: Container(
-                    width: 44,
-                    height: 44,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(14),
-                        color: AppPalette.white),
-                    padding:
-                        const EdgeInsets.only(left: 14, right: 10, bottom: 2),
-                    child: SvgPicture.asset(
-                      'assets/icons/gps.svg',
+                  const SizedBox(
+                    width: 200,
+                  ),
+                  GestureDetector(
+                    onTap: () {},
+                    child: Container(
+                      width: 44,
+                      height: 44,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(14),
+                          color: AppPalette.white),
+                      child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: SvgPicture.asset(
+                          'assets/icons/gps.svg',
+                        ),
+                      ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
           Positioned(
             top: 458,
             child: Container(
-              width: 400,
+              width: MediaQuery.of(context).size.width,
               height: 322,
               decoration: BoxDecoration(
                 color: AppPalette.white,
@@ -171,30 +174,41 @@ class _MapViewState extends State<MapView> {
                         const SizedBox(
                           height: 15,
                         ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            Container(
-                              width: 71.25,
-                              height: 4,
-                              color: AppPalette.green,
-                            ),
-                            Container(
-                              width: 71.25,
-                              height: 4,
-                              color: AppPalette.green,
-                            ),
-                            Container(
-                              width: 71.25,
-                              height: 4,
-                              color: AppPalette.green,
-                            ),
-                            Container(
-                              width: 71.25,
-                              height: 4,
-                              color: AppPalette.graylight5,
-                            )
-                          ],
+                        Padding(
+                          padding: const EdgeInsets.only(left: 40),
+                          child: Row(
+                            children: [
+                              Container(
+                                width: 71.25,
+                                height: 4,
+                                color: AppPalette.green,
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Container(
+                                width: 71.25,
+                                height: 4,
+                                color: AppPalette.green,
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Container(
+                                width: 71.25,
+                                height: 4,
+                                color: AppPalette.green,
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Container(
+                                width: 71.25,
+                                height: 4,
+                                color: AppPalette.graylight5,
+                              )
+                            ],
+                          ),
                         ),
                         const SizedBox(
                           height: 15,

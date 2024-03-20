@@ -46,74 +46,83 @@ class _HomeViewState extends State<HomeView> {
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      const Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          Text(
-                                            'Location',
-                                            style: TextStyle(
-                                                color: AppPalette.gray),
-                                          ),
-                                          Text(
-                                            'Paises',
-                                            style: TextStyle(
-                                                color: AppPalette.white),
-                                          ),
-                                        ],
-                                      ),
-                                      Image.asset(
-                                        'assets/images/perfil.png',
-                                        height: 40,
-                                        width: 40,
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ],
-                                  ),
-                                  const SizedBox(height: 20),
-                                  Container(
-                                    width: 315,
-                                    height: 52,
-                                    decoration: BoxDecoration(
-                                        color: AppPalette.blacklight2,
-                                        borderRadius: BorderRadius.circular(5)),
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                        left: 20, right: 35),
                                     child: Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceBetween,
                                       children: [
-                                        Padding(
-                                          padding: const EdgeInsets.all(8.0),
-                                          child: SvgPicture.asset(
-                                            'assets/icons/search.svg',
-                                            width: 20,
-                                            height: 20,
-                                          ),
+                                        const Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Text(
+                                              'Location',
+                                              style: TextStyle(
+                                                  color: AppPalette.gray),
+                                            ),
+                                            Text(
+                                              'Paises',
+                                              style: TextStyle(
+                                                  color: AppPalette.white),
+                                            ),
+                                          ],
                                         ),
-                                        Padding(
-                                          padding: const EdgeInsets.all(6.0),
-                                          child: Container(
-                                            width: 44,
-                                            height: 44,
-                                            decoration: BoxDecoration(
-                                                color: AppPalette.primary,
-                                                borderRadius:
-                                                    BorderRadius.circular(12)),
-                                            child: Padding(
-                                              padding:
-                                                  const EdgeInsets.all(12.0),
-                                              child: SvgPicture.asset(
-                                                'assets/icons/filter.svg',
-                                                width: 20,
-                                                height: 20,
+                                        Image.asset(
+                                          'assets/images/perfil.png',
+                                          height: 40,
+                                          width: 40,
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  const SizedBox(height: 20),
+                                  Padding(
+                                    padding: const EdgeInsets.only(right: 10),
+                                    child: Container(
+                                      width: 315,
+                                      height: 52,
+                                      decoration: BoxDecoration(
+                                          color: AppPalette.blacklight2,
+                                          borderRadius:
+                                              BorderRadius.circular(16)),
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Padding(
+                                            padding: const EdgeInsets.all(10.0),
+                                            child: SvgPicture.asset(
+                                              'assets/icons/search.svg',
+                                              width: 20,
+                                              height: 20,
+                                            ),
+                                          ),
+                                          Padding(
+                                            padding: const EdgeInsets.all(6.0),
+                                            child: Container(
+                                              width: 44,
+                                              height: 44,
+                                              decoration: BoxDecoration(
+                                                  color: AppPalette.primary,
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          12)),
+                                              child: Padding(
+                                                padding:
+                                                    const EdgeInsets.all(10.0),
+                                                child: SvgPicture.asset(
+                                                  'assets/icons/filter.svg',
+                                                  width: 20,
+                                                  height: 20,
+                                                ),
                                               ),
                                             ),
                                           ),
-                                        ),
-                                      ],
+                                        ],
+                                      ),
                                     ),
                                   ),
                                   SizedBox(
@@ -122,9 +131,11 @@ class _HomeViewState extends State<HomeView> {
                                 ],
                               ),
                             ),
-                            SizedBox(height: 50,),
+                            SizedBox(
+                              height: 50,
+                            ),
                             Padding(
-                              padding: EdgeInsets.all(15),
+                              padding: EdgeInsets.only(left: 42, top: 15),
                               child: SizedBox(
                                 height: 38,
                                 child: ListView(
@@ -246,11 +257,11 @@ class _HomeViewState extends State<HomeView> {
         });
       },
       child: Container(
-        width: 121,
+        width: 99,
         height: 38,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
-          color: selectedCoffee == type ? AppPalette.primary : null,
+          color: selectedCoffee == type ? AppPalette.primary : AppPalette.white,
         ),
         child: Center(
           child: Text(
@@ -281,20 +292,26 @@ class _HomeViewState extends State<HomeView> {
     return Column(
       children: [
         const SizedBox(height: 10),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            _buildDetail('assets/images/cappucino1.png', true, 4.53, 4.8),
-            _buildDetail('assets/images/cappucino2.png', false, 3.90, 4.9)
-          ],
+        Padding(
+          padding: const EdgeInsets.only(left: 40),
+          child: Row(
+            children: [
+              _buildDetail('assets/images/cappucino1.png', true, 4.53, 4.8),
+              const SizedBox(width: 25),
+              _buildDetail('assets/images/cappucino2.png', false, 3.90, 4.9)
+            ],
+          ),
         ),
         const SizedBox(height: 10),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            _buildDetail('assets/images/cappucino3.png', true, 4.53, 4.5),
-            _buildDetail('assets/images/cappucino4.png', false, 3.90, 4.0)
-          ],
+        Padding(
+          padding: const EdgeInsets.only(left: 40),
+          child: Row(
+            children: [
+              _buildDetail('assets/images/cappucino3.png', true, 4.53, 4.5),
+              const SizedBox(width: 25),
+              _buildDetail('assets/images/cappucino4.png', false, 3.90, 4.0)
+            ],
+          ),
         ),
         const SizedBox(height: 10),
       ],

@@ -63,157 +63,160 @@ class _DetailItemViewState extends State<DetailItemView> {
                 ),
               ),
             ),
-            Container(
-              padding: const EdgeInsets.all(20),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Text(
-                    'Cappucino',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 20,
-                      color: AppPalette.blacklight3,
-                    ),
-                  ),
-                  const Text(
-                    'with Chocolate',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 12,
-                      color: AppPalette.graylight,
-                    ),
-                  ),
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        children: [
-                          const Icon(Icons.star, color: AppPalette.yellow),
-                          RichText(
-                            text: const TextSpan(
-                              children: [
-                                TextSpan(
-                                  text: '4.8',
-                                  style: TextStyle(
-                                    color: AppPalette.blacklight3,
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w600,
-                                  ),
-                                ),
-                                TextSpan(
-                                  text: ' (230)',
-                                  style: TextStyle(
-                                    color: AppPalette.graylight2,
-                                    fontSize: 12,
-                                    fontWeight: FontWeight.w400,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Container(
-                            width: 44,
-                            height: 44,
-                            decoration: BoxDecoration(
-                                color: AppPalette.white2,
-                                borderRadius: BorderRadius.circular(14)),
-                            child: Image.asset(
-                              'assets/icons/bean.png',
-                              width: 24,
-                              height: 24,
-                            ),
-                          ),
-                          const SizedBox(
-                            width: 10,
-                          ),
-                          Container(
-                            width: 44,
-                            height: 44,
-                            decoration: BoxDecoration(
-                                color: AppPalette.white2,
-                                borderRadius: BorderRadius.circular(14)),
-                            child: Image.asset(
-                              'assets/icons/milk.png',
-                              width: 24,
-                              height: 24,
-                            ),
-                          )
-                        ],
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 10),
-                  Center(
-                    child: Container(
-                      width: 315,
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: AppPalette.color1,
-                          width: 1,
-                        ),
+            Padding(
+              padding: const EdgeInsets.all(25),
+              child: Container(
+                padding: const EdgeInsets.all(20),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Text(
+                      'Cappucino',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 20,
+                        color: AppPalette.blacklight3,
                       ),
                     ),
-                  ),
-                  const SizedBox(height: 10),
-                  const Text(
-                    'Description',
-                    style: TextStyle(
-                      color: AppPalette.blacklight3,
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600,
+                    const Text(
+                      'with Chocolate',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w400,
+                        fontSize: 12,
+                        color: AppPalette.graylight,
+                      ),
                     ),
-                  ),
-                  const SizedBox(height: 10),
-                  RichText(
-                    text: const TextSpan(
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        TextSpan(
-                          text:
-                              'A cappuccino is an approximately 150 ml (5 oz) beverage, with 25 ml of espresso coffee and 85ml of fresh milk the fo..',
-                          style: TextStyle(
-                            color: AppPalette.graylight,
-                            fontSize: 14,
-                            fontWeight: FontWeight.w600,
-                          ),
+                        Row(
+                          children: [
+                            const Icon(Icons.star, color: AppPalette.yellow),
+                            RichText(
+                              text: const TextSpan(
+                                children: [
+                                  TextSpan(
+                                    text: '4.8',
+                                    style: TextStyle(
+                                      color: AppPalette.blacklight3,
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w600,
+                                    ),
+                                  ),
+                                  TextSpan(
+                                    text: ' (230)',
+                                    style: TextStyle(
+                                      color: AppPalette.graylight2,
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.w400,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
                         ),
-                        TextSpan(
-                          text: 'Read More',
-                          style: TextStyle(
-                            color: AppPalette.primary,
-                            fontSize: 14,
-                            fontWeight: FontWeight.w400,
-                          ),
+                        Row(
+                          children: [
+                            Container(
+                              width: 44,
+                              height: 44,
+                              decoration: BoxDecoration(
+                                  color: AppPalette.white2,
+                                  borderRadius: BorderRadius.circular(14)),
+                              child: Image.asset(
+                                'assets/icons/bean.png',
+                                width: 24,
+                                height: 24,
+                              ),
+                            ),
+                            const SizedBox(
+                              width: 10,
+                            ),
+                            Container(
+                              width: 44,
+                              height: 44,
+                              decoration: BoxDecoration(
+                                  color: AppPalette.white2,
+                                  borderRadius: BorderRadius.circular(14)),
+                              child: Image.asset(
+                                'assets/icons/milk.png',
+                                width: 24,
+                                height: 24,
+                              ),
+                            )
+                          ],
                         ),
                       ],
                     ),
-                  ),
-                  const SizedBox(height: 10),
-                  const Text(
-                    'Size',
-                    style: TextStyle(
-                      color: AppPalette.blacklight3,
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600,
+                    const SizedBox(height: 10),
+                    Center(
+                      child: Container(
+                        width: 315,
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            color: AppPalette.color1,
+                            width: 1,
+                          ),
+                        ),
+                      ),
                     ),
-                  ),
-                  const SizedBox(height: 10),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      _buildCustomSize(selectedSize == 'S', 'S'),
-                      _buildCustomSize(selectedSize == 'M', 'M'),
-                      _buildCustomSize(selectedSize == 'L', 'L'),
-                    ],
-                  ),
-                ],
+                    const SizedBox(height: 10),
+                    const Text(
+                      'Description',
+                      style: TextStyle(
+                        color: AppPalette.blacklight3,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    const SizedBox(height: 10),
+                    RichText(
+                      text: const TextSpan(
+                        children: [
+                          TextSpan(
+                            text:
+                                'A cappuccino is an approximately 150 ml (5 oz) beverage, with 25 ml of espresso coffee and 85ml of fresh milk the fo..',
+                            style: TextStyle(
+                              color: AppPalette.graylight,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                          TextSpan(
+                            text: 'Read More',
+                            style: TextStyle(
+                              color: AppPalette.primary,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(height: 10),
+                    const Text(
+                      'Size',
+                      style: TextStyle(
+                        color: AppPalette.blacklight3,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    const SizedBox(height: 10),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        _buildCustomSize(selectedSize == 'S', 'S'),
+                        _buildCustomSize(selectedSize == 'M', 'M'),
+                        _buildCustomSize(selectedSize == 'L', 'L'),
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ),
             SizedBox(
