@@ -95,7 +95,9 @@ class _MapViewState extends State<MapView> {
                       child: Padding(
                         padding: const EdgeInsets.all(10.0),
                         child: SvgPicture.asset(
-                          'assets/icons/arrow-left.svg', height: 24, width: 24,
+                          'assets/icons/arrow-left.svg',
+                          height: 24,
+                          width: 24,
                         ),
                       ),
                     ),
@@ -124,210 +126,238 @@ class _MapViewState extends State<MapView> {
             ),
           ),
           Positioned(
-            top: 458,
-            child: Container(
-              width: MediaQuery.of(context).size.width,
-              height: 322,
-              decoration: BoxDecoration(
-                color: AppPalette.white,
-                borderRadius: BorderRadius.circular(24),
+            bottom: MediaQuery.of(context).size.height / 8,
+            left: MediaQuery.of(context).size.width / 3,
+            child: Center(
+                child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                primary: AppPalette.white,
               ),
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Container(
-                      width: 44,
-                      height: 5,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(2.5),
-                          color: AppPalette.color1),
-                    ),
-                    Column(
-                      children: [
-                        const Text(
-                          '10 minutes left',
-                          style: TextStyle(
-                              fontSize: 16, fontWeight: FontWeight.w600),
+              child: const Text('Informações',
+                  style: TextStyle(color: AppPalette.blacklight2)),
+              onPressed: () {
+                showModalBottomSheet<void>(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return Container(
+                        width: MediaQuery.of(context).size.width,
+                        height: 322,
+                        decoration: BoxDecoration(
+                          color: AppPalette.white,
+                          borderRadius: BorderRadius.circular(24),
                         ),
-                        RichText(
-                          text: const TextSpan(children: [
-                            TextSpan(
-                              text: 'Delivery to ',
-                              style: TextStyle(
-                                color: AppPalette.blacklight4,
-                                fontSize: 12,
-                                fontWeight: FontWeight.w400,
-                              ),
-                            ),
-                            TextSpan(
-                              text: 'Jl. Kpg Sutoyo',
-                              style: TextStyle(
-                                color: AppPalette.blacklight2,
-                                fontSize: 12,
-                                fontWeight: FontWeight.w600,
-                              ),
-                            ),
-                          ]),
-                        ),
-                        const SizedBox(
-                          height: 15,
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 40),
-                          child: Row(
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
                               Container(
-                                width: 71.25,
-                                height: 4,
-                                color: AppPalette.green,
-                              ),
-                              SizedBox(
-                                width: 10,
-                              ),
-                              Container(
-                                width: 71.25,
-                                height: 4,
-                                color: AppPalette.green,
-                              ),
-                              SizedBox(
-                                width: 10,
-                              ),
-                              Container(
-                                width: 71.25,
-                                height: 4,
-                                color: AppPalette.green,
-                              ),
-                              SizedBox(
-                                width: 10,
-                              ),
-                              Container(
-                                width: 71.25,
-                                height: 4,
-                                color: AppPalette.graylight5,
-                              )
-                            ],
-                          ),
-                        ),
-                        const SizedBox(
-                          height: 15,
-                        ),
-                        Container(
-                          width: 315,
-                          height: 90,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(14),
-                              border: Border.all(
-                                  width: 1, color: AppPalette.color1)),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceAround,
-                            children: [
-                              Container(
-                                width: 62,
-                                height: 62,
+                                width: 44,
+                                height: 5,
                                 decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(12),
-                                    border: Border.all(
-                                        width: 1, color: AppPalette.color1)),
-                                child: Image.asset('assets/images/bike.png'),
+                                    borderRadius: BorderRadius.circular(2.5),
+                                    color: AppPalette.color1),
                               ),
-                              const Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.start,
+                              Column(
                                 children: [
-                                  Text(
-                                    'Delivered your order',
+                                  const Text(
+                                    '10 minutes left',
                                     style: TextStyle(
-                                      color: AppPalette.blacklight4,
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w600,
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w600),
+                                  ),
+                                  RichText(
+                                    text: const TextSpan(children: [
+                                      TextSpan(
+                                        text: 'Delivery to ',
+                                        style: TextStyle(
+                                          color: AppPalette.blacklight4,
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.w400,
+                                        ),
+                                      ),
+                                      TextSpan(
+                                        text: 'Jl. Kpg Sutoyo',
+                                        style: TextStyle(
+                                          color: AppPalette.blacklight2,
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.w600,
+                                        ),
+                                      ),
+                                    ]),
+                                  ),
+                                  const SizedBox(
+                                    height: 15,
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 40),
+                                    child: Row(
+                                      children: [
+                                        Container(
+                                          width: 71.25,
+                                          height: 4,
+                                          color: AppPalette.green,
+                                        ),
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        Container(
+                                          width: 71.25,
+                                          height: 4,
+                                          color: AppPalette.green,
+                                        ),
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        Container(
+                                          width: 71.25,
+                                          height: 4,
+                                          color: AppPalette.green,
+                                        ),
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        Container(
+                                          width: 71.25,
+                                          height: 4,
+                                          color: AppPalette.graylight5,
+                                        )
+                                      ],
                                     ),
                                   ),
-                                  SizedBox(
-                                    height: 10,
+                                  const SizedBox(
+                                    height: 15,
                                   ),
-                                  Text(
-                                    'We deliver your goods to you in \nthe shortes possible time.',
-                                    style: TextStyle(
-                                      color: AppPalette.blacklight2,
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.w400,
+                                  Container(
+                                    width: 315,
+                                    height: 90,
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(14),
+                                        border: Border.all(
+                                            width: 1,
+                                            color: AppPalette.color1)),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceAround,
+                                      children: [
+                                        Container(
+                                          width: 62,
+                                          height: 62,
+                                          decoration: BoxDecoration(
+                                              borderRadius:
+                                                  BorderRadius.circular(12),
+                                              border: Border.all(
+                                                  width: 1,
+                                                  color: AppPalette.color1)),
+                                          child: Image.asset(
+                                              'assets/images/bike.png'),
+                                        ),
+                                        const Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Text(
+                                              'Delivered your order',
+                                              style: TextStyle(
+                                                color: AppPalette.blacklight4,
+                                                fontSize: 14,
+                                                fontWeight: FontWeight.w600,
+                                              ),
+                                            ),
+                                            SizedBox(
+                                              height: 10,
+                                            ),
+                                            Text(
+                                              'We deliver your goods to you in \nthe shortes possible time.',
+                                              style: TextStyle(
+                                                color: AppPalette.blacklight2,
+                                                fontSize: 12,
+                                                fontWeight: FontWeight.w400,
+                                              ),
+                                            ),
+                                          ],
+                                        )
+                                      ],
                                     ),
                                   ),
+                                  const SizedBox(
+                                    height: 20,
+                                  ),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Image.asset(
+                                              'assets/images/perfil2.png'),
+                                          const SizedBox(
+                                            width: 5,
+                                          ),
+                                          const Column(
+                                            children: [
+                                              Text(
+                                                'Johan Hawn',
+                                                style: TextStyle(
+                                                  color: AppPalette.blacklight4,
+                                                  fontSize: 14,
+                                                  fontWeight: FontWeight.w600,
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                height: 5,
+                                              ),
+                                              Text(
+                                                'Personal Courier',
+                                                style: TextStyle(
+                                                  color: AppPalette.blacklight2,
+                                                  fontSize: 12,
+                                                  fontWeight: FontWeight.w400,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ],
+                                      ),
+                                      const SizedBox(
+                                        width: 30,
+                                      ),
+                                      GestureDetector(
+                                        onTap: () {},
+                                        child: Container(
+                                          width: 54,
+                                          height: 54,
+                                          decoration: BoxDecoration(
+                                              borderRadius:
+                                                  BorderRadius.circular(12),
+                                              border: Border.all(
+                                                  width: 1,
+                                                  color: AppPalette.border)),
+                                          child: Padding(
+                                            padding: const EdgeInsets.all(12.0),
+                                            child: SvgPicture.asset(
+                                                'assets/icons/telpon.svg',
+                                                width: 24,
+                                                height: 24),
+                                          ),
+                                        ),
+                                      )
+                                    ],
+                                  )
                                 ],
                               )
                             ],
                           ),
                         ),
-                        const SizedBox(
-                          height: 20,
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Image.asset('assets/images/perfil2.png'),
-                                const SizedBox(
-                                  width: 5,
-                                ),
-                                const Column(
-                                  children: [
-                                    Text(
-                                      'Johan Hawn',
-                                      style: TextStyle(
-                                        color: AppPalette.blacklight4,
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.w600,
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 5,
-                                    ),
-                                    Text(
-                                      'Personal Courier',
-                                      style: TextStyle(
-                                        color: AppPalette.blacklight2,
-                                        fontSize: 12,
-                                        fontWeight: FontWeight.w400,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                            const SizedBox(
-                              width: 30,
-                            ),
-                            GestureDetector(
-                              onTap: () {},
-                              child: Container(
-                                width: 54,
-                                height: 54,
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(12),
-                                    border: Border.all(
-                                        width: 1, color: AppPalette.border)),
-                                child: Padding(
-                                  padding: const EdgeInsets.all(12.0),
-                                  child: SvgPicture.asset(
-                                      'assets/icons/telpon.svg',
-                                      width: 24,
-                                      height: 24),
-                                ),
-                              ),
-                            )
-                          ],
-                        )
-                      ],
-                    )
-                  ],
-                ),
-              ),
-            ),
-          ),
+                      );
+                    });
+              },
+            )),
+          )
         ],
       ),
     );
